@@ -1,0 +1,26 @@
+class Data {  
+    String name;
+    int age;
+    String degree;
+    String skills;
+
+    void resume() {
+        System.out.println("---- Resume ----");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Degree: " + degree);
+        System.out.println("Skills: " + skills);
+    }
+}
+
+public class Main {   
+    public static void main(String[] args) {
+        Data details = new Data();
+        details.name = "Suraj";
+        details.age = 22;
+        details.degree = "BTECH";
+        details.skills = "Java, Web Tech";
+
+        details.resume();
+    }
+}
