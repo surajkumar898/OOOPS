@@ -1,0 +1,11 @@
+if i intialize the variable using the single line intializer then,
+then inside the static i can print that variable value 
+it execute before execution of the main method 
+class Test {
+    static int x = 100;  // static single-line initializer
+
+    public static void main(String[] args) {
+        System.out.println(Test.x);  // ✅ prints 100 directly
+    }
+}
+ if i implement the multi line intializer, then the 
