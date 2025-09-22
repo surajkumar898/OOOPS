@@ -1,0 +1,30 @@
+In a Non Static members, if we want to print non static object then we have to call the method by creating the object,
+by using the object to call the method. all these thing are done inside the main method class.
+class Student {
+    void sayHello() {
+        System.out.println("Hello from non-static method!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();  // ✅ object created
+        s1.sayHello();               // call using object
+    }
+}
+In a Static members, if  i we want to print the the values, then i dont need to create the object,
+instead of that, inside the main methid  i call the method without object,
+i use the static method and classname.
+
+class Student {
+    static void greet() {
+        System.out.println("Hello from static method!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student.greet();  // ✅ call without object
+    }
+}
+
