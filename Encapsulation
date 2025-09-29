@@ -1,0 +1,115 @@
+Encapsulation is the binding of the data (variables) and the binding of the method for restricting direct accesss to the data by using access modifier (public private protected)
+class Student {
+    private String name;
+    private int age;
+
+    // Constructor to initialize private variables
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+In encapsulation, if non static members variable declared as private means, i cant directly access the that variable so we use getters to read the private variable.getters is a public method and safe to access hiding data
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+public double getBalance() {
+        return balance;
+    }
+class Student {
+    private String name;
+    private int age;
+
+    // Constructor to initialize private variables
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter
+    public String getName() {
+        return name;
+    }
+
+    // Getter
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Encapsulation using constructor
+        Student s1 = new Student("Rahul", 21);
+        System.out.println(s1.getName() + " - " + s1.getAge());
+    }
+}
+if i use Static variable inside the class  then, i dont need to create object, rather than this i would  using classname.variable to set the values for that variable. 
+class Student {
+    private static String name;
+    private static int rollNo;
+    private static int marks;
+
+    // Static setters
+    public static void setName(String name) {
+        Student.name = name;
+    }
+    public static void setRollNo(int rollNo) {
+        Student.rollNo = rollNo;
+    }
+    public static void setMarks(int marks) {
+        Student.marks = marks;
+    }
+
+    // Static getters
+    public static String getName() { return name; }
+    public static int getRollNo() { return rollNo; }
+    public static int getMarks() { return marks; }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // No object creation, directly use class name
+        Student.setName("Rahul");
+        Student.setRollNo(101);
+        Student.setMarks(90);
+
+        System.out.println("Name: " + Student.getName());
+        System.out.println("Roll No: " + Student.getRollNo());
+        System.out.println("Marks: " + Student.getMarks());
+    }
+}
+if dont we dont use the constructor in the encapusaltion then we ,ust use the setter with the replacement for the constructor  above program explain clearly with example see that program.
+using xonstructor
+class Student {
+    // Private data (cannot access directly)
+    private String name;
+    private int age;
+
+    // Constructor to initialize
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Rahul", 21);
+
+        // Accessing private data using getters
+        System.out.println("Name: " + s1.getName());
+        System.out.println("Age: " + s1.getAge());
+    }
+}
+
+
