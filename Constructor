@@ -1,0 +1,47 @@
+Constructor is the special method,it is used to intialize the  object.constructor name is same as the classname. it does not have any return type. constructor is called when object is created and constructor assigning 
+the values tho the object variable.
+how to create the object classname s1= new classname
+Creating the constructor by the public classname() it is present with with arguments or without arguments.
+Example program for Constructor 
+
+class Info {
+    String name;
+    int marks;
+    char grade;
+    public Info(String n,int m, char g){
+        name =n;
+        marks=m;
+        grade=g;
+    }
+
+        void student(){
+            System.out.println("Result");
+                  System.out.println("Name: " +name);
+                  System.out.println("Marks: " +marks);  
+                  System.out.println("Grade: " +grade);
+        }
+}
+ 
+public class Main{
+    public static void main(String[] args){
+        Info s1=new Info("Suraj",95, 'A');
+        s1.student();
+    }
+}
+Necessity of the Constructor, Only for non static variable not for Static variable Example for this 
+class Info {
+    static String name;
+
+    static {
+        name = "Suraj"; // Assign value to static variable
+        System.out.println(name); // Print value
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // No need to create object to see the static block output
+    }
+}
+In Static we dont need to create object and method, inside the static block we can print the static variable values 
+
