@@ -1,0 +1,102 @@
+import java.util.Scanner;
+
+class ATM {
+    private boolean insertingcard;
+    private String option;
+    private int fourdigit;
+    private int balance;
+    private int amount;
+    private int withdraw;
+    private String ins;
+    
+    // setters
+    public void setInsertingCard(boolean insertingcard){
+        this.insertingcard = insertingcard;
+    }
+    public void setOption(String option){
+        this.option= option;
+    }
+    public void setFourDigit(int fourdigit){
+        this.fourdigit= fourdigit;
+    }
+    public void setBalance(int balance){
+        this.balance = balance;
+    }
+    public void setAmount(int amount){
+        this.amount = amount;
+    }
+    public void setWithdraw(int withdraw){
+        this.withdraw= withdraw;
+    }
+    public void setIns(String ins){
+        this.ins= ins;
+    }
+
+    // getters
+    public boolean isInsertingCard(){
+        return insertingcard;
+    }
+    public String getOption(){
+        return option;
+    }
+    public int getFourDigit(){
+        return fourdigit;
+    }
+    public int getBalance(){
+        return balance;
+    }
+    public int getAmount(){
+        return amount;
+    }
+    public int getWithdraw(){
+        return withdraw;
+    }
+    public String getIns(){
+        return ins;
+    }
+}
+
+public class Main {
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        ATM a = new ATM();
+        boolean cardIsInserting;   // ✅ fixed variable name
+
+        do {
+            System.out.println("Insert card ? (true/false): ");
+            cardIsInserting = sc.nextBoolean();
+
+            a.setInsertingCard(cardIsInserting);
+
+            if(a.isInsertingCard()){
+                System.out.println("Card is inserted");
+            } else {
+                System.out.println("Card is not Inserted");
+            }
+
+            System.out.println("Do you again want to insert card ? (true/false): "); 
+            cardIsInserting = sc.nextBoolean();
+
+        } 
+        while(cardIsInserting); 
+                System.out.println("(Saving/Current): ");
+                String s= sc.next();
+               a.setOption(s);
+               System.out.println("Taking Money from the: " +a.getOption());
+               System.out.println("Enter the pin code: ");
+               int b= sc.nextInt();
+               a.setFourDigit(b);
+           a.setBalance(5000);
+               System.out.println("Enter the amount: ");
+               int c= sc.nextInt();
+                 a.setAmount(c);
+               if(c > 0 && c <= a.getBalance()){
+               System.out.println("You successfully withdraw the amount: " +a.getWithdraw());
+               a.setBalance( a.getBalance()-c);
+                System.out.println("Remaining balance: " + a.getBalance());
+           }
+           else{
+               System.out.println("Insufficient Balance");
+           }
+    }
+}
