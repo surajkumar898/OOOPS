@@ -1,5 +1,5 @@
-Constructor is the special method,it is used to intialize the  object.constructor name is same as the classname. it does not have any return type. constructor is called when object is created and constructor assigning 
-the values tho the object variable.
+Constructor is the special method,it is used to intialize the  object.constructor name is same as the classname. it does not have any return type. constructor is called when object is created and constructor is 
+ values tho the object.
 how to create the object classname s1= new classname
 Creating the constructor by the public classname() it is present with with arguments or without arguments.
 Example program for Constructor 
