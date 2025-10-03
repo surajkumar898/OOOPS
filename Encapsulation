@@ -1,11 +1,11 @@
 Encapsulation is the binding of the data (variables) and the binding of the method for restricting direct accesss to the data by using access modifier (public private protected)
 class Student {
-    private String name;
+    private Strinhttps://github.com/surajkumar898/OOOPS/tree/maing name;
     private int age;
 
     // Constructor to initialize private variables
     public Student(String name, int age) {
-        this.name = name;
+        this.name = name; // assigning local variable to the instance variable
         this.age = age;
     }
 In encapsulation, if non static members variable declared as private means, i cant directly access the that variable so we use getters to read the private variable.getters is a public method and safe to access hiding data
