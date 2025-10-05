@@ -1,0 +1,29 @@
+Inheritance consist of 4 types Single-lvl-Inheritance Multi-lvl-inheritance hierachial-lvl-inheritance hybrid-lvl-inheritance
+Single-lvl-inheritance - child class acquring property and behaviour  from the  parent class. this can be implement by using non static multi line intializer 
+class bike{
+    void details(){
+        System.out.println("Bike model is yamaha");
+    }
+}
+    class power extends bike {
+    void details1(){
+        System.out.println("Bike cc is 150");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        power vech= new power();
+        vech.details();
+        vech.details1();
+    }
+}
+let I give   u  a  real time example let us take bike model like yamaha it has characteristic of the 155 cc of power engine followd by i would give mileage of 20km per liter  here parent class have characteristic of bike mode 
+whereas child class inherits the property of bike cc, mileage color from the parent class.
+
+Multi-lvl-inheritance
+Every parent class have one child  
+The parent class is Bike, which has general features like the model name.
+
+The child class Yamaha inherits from Bike and adds more specific features, like engine CC.
+
+Then, a grandchild class YamahaSports inherits from Yamaha and adds its own details, like mileage.
