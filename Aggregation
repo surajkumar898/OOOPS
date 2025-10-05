@@ -1,0 +1,43 @@
+
+class Mobile {
+    String brand;
+    String model;
+    int price;
+    Sim slot;  // Mobile has-a Sim (aggregation)
+
+class Sim { 
+}
+
+    public Mobile(String b, String m, int p) {
+        brand = b;
+        model = m;
+        price = p;
+        slot = null;  
+    }
+
+    boolean isSlotEmpty() {
+        return slot == null;
+    }
+
+    void addsim(Sim s) {
+        if (isSlotEmpty()) {
+            slot = s;  
+            System.out.println("SIM added successfully");
+        } else {
+            System.out.println("Slot is full");
+        }
+    }
+
+    void details() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Price: " + price);  
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Mobile myPhone = new Mobile("Samsung", "S24 Ultra", 120000);
+        myPhone.details();       // Show Mobile + SIM info
+    }
+}
