@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class Main {
+
+    // Show current balance
+    public static void showBalance(int balance) {
+        System.out.println("Current balance: " + balance);
+    }
+
+    // Show withdrawal amount
+    public static void showWithdrawal(int withdrawal) {
+        System.out.println("Withdrawal amount: " + withdrawal);
+    }
+
+    // Calculate and show new balance
+    public static int newBalance(int balance, int withdrawal) {
+        if (withdrawal > balance) {
+            System.out.println("Insufficient balance!");
+            return balance;
+        } else {
+            int newBalance = balance - withdrawal;
+            System.out.println("New balance: " + newBalance);
+            return newBalance;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the current balance: ");
+        int balance = sc.nextInt();
+
+        showBalance(balance);
+
+        System.out.print("Enter the withdrawal amount: ");
+        int withdrawal = sc.nextInt();
+
+        showWithdrawal(withdrawal);
+
+        balance = newBalance(balance, withdrawal); // Update balance
+
+        sc.close();
+    }
+}
