@@ -1,4 +1,4 @@
-Inheritance consist of 4 types Single-lvl-Inheritance Multi-lvl-inheritance hierachial-lvl-inheritance hybrid-lvl-inheritance
+Inheritance consist of 4 types Single-lvl-Inheritance, Multi-lvl-inheritance, hierachial-lvl-inheritance, Multiple Inherotance, hybrid-lvl-inheritance.
 Single-lvl-inheritance - child class acquring property and behaviour  from the  parent class. this can be implement by using non static multi line intializer 
 class bike{
     void details(){
@@ -27,3 +27,90 @@ The parent class is Bike, which has general features like the model name.
 The child class Yamaha inherits from Bike and adds more specific features, like engine CC.
 
 Then, a grandchild class YamahaSports inherits from Yamaha and adds its own details, like mileage.
+class Bike {
+    static void model() {
+        System.out.println("Bike model is R15");
+    }
+}
+
+class Yamaha extends Bike {
+    static void features() {
+        System.out.println("R15 mileage is 50km/1000L");
+    }
+}
+
+class Design extends Yamaha {     // ✔ Correct now
+    static void colour() {
+        System.out.println("White");
+    }
+}
+
+public class japan {
+    public static void main(String[] args) {
+        Bike.model();
+        Yamaha.features();
+        Design.colour();
+
+// Hierachial Inheritance 
+One parent class having more than one class 
+class JavaDeveloper {
+    static void work() {
+        System.out.println("Developing product");
+    }
+}
+
+class Skills extends JavaDeveloper {
+    static void knowledge() {
+        System.out.println("Core java, Web tech, Sql");
+    }
+}
+
+class LogicalThinking extends JavaDeveloper {     // ✔ Correct now
+    static void logic() {
+        System.out.println("Logical thinking is very important to");
+    }
+}
+
+public class japan {
+    public static void main(String[] args) {
+      JavaDeveloper.work();
+      Skills.Knowledge();
+      LogicalThinking.logic();
+    }
+    
+}
+    // Hybrid inheritance 
+Combination of two or more Inheritance 
+class A {
+    void methodA() {
+        System.out.println("This is Class A");
+    }
+}
+
+class B extends A {
+    void methodB() {
+        System.out.println("This is Class B");
+    }
+}
+
+class C extends A {
+    void methodC() {
+        System.out.println("This is Class C");
+    }
+}
+
+class D extends B {    // single + multilevel + hierarchical mixed
+    void methodD() {
+        System.out.println("This is Class D");
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        D obj = new D();
+        obj.methodA();   
+        obj.methodB(); 
+        obj.methodD();   
+
+    }
+}
