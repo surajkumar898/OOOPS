@@ -42,3 +42,23 @@ class Main {
         sc.close();
     }
 }
+
+// Correct program 
+class Main {
+
+    public static void show(int balance) {
+        System.out.println("Current balance: " + balance);
+    }
+
+    public static void show(int balance, int withdrawal) {
+        System.out.println("Balance: " + balance);
+        System.out.println("Withdrawal: " + withdrawal);
+        System.out.println("New balance: " + (balance - withdrawal));
+    }
+
+    public static void main(String[] args) {
+        show(5000);             // Calls show(int)
+        show(5000, 1000);       // Calls show(int, int)
+    }
+}
+
