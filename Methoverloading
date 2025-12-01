@@ -1,0 +1,15 @@
+Each child class inherit the property from the parent class 
+All class method have same name, same parameter, same return type
+class Bike {
+public void engine() {
+System.out.println("Bike is engine");
+}
+}
+class Honda Extends Bike {
+public void engine() {
+System.out.println("Honda engine is 150cc");
+}
+}
+class Suzuki extends Bike {
+public void engine() {
+System.out.println("Yamaha engine is 155cc");
