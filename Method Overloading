@@ -1,64 +1,35 @@
+Allow multiple methods with same name, methods must difer in the number or type of parameter
 import java.util.Scanner;
 
 class Main {
-
-    // Show current balance
-    public static void showBalance(int balance) {
+    public static void show(int balance) {
         System.out.println("Current balance: " + balance);
     }
 
-    // Show withdrawal amount
-    public static void showWithdrawal(int withdrawal) {
-        System.out.println("Withdrawal amount: " + withdrawal);
-    }
-
-    // Calculate and show new balance
-    public static int newBalance(int balance, int withdrawal) {
+    public static void show(int balance, int withdrawal) {
         if (withdrawal > balance) {
             System.out.println("Insufficient balance!");
-            return balance;
         } else {
-            int newBalance = balance - withdrawal;
-            System.out.println("New balance: " + newBalance);
-            return newBalance;
+            System.out.println("Balance: " + balance);
+            System.out.println("Withdrawal: " + withdrawal);
+            System.out.println("New balance: " + (balance - withdrawal));
         }
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the current balance: ");
+        System.out.print("Enter current balance: ");
         int balance = sc.nextInt();
 
-        showBalance(balance);
+        show(balance); // Calls show(int)
 
-        System.out.print("Enter the withdrawal amount: ");
+        System.out.print("Enter withdrawal amount: ");
         int withdrawal = sc.nextInt();
 
-        showWithdrawal(withdrawal);
-
-        balance = newBalance(balance, withdrawal); // Update balance
+        show(balance, withdrawal); // Calls show(int, int)
 
         sc.close();
-    }
-}
-
-// Correct program 
-class Main {
-
-    public static void show(int balance) {
-        System.out.println("Current balance: " + balance);
-    }
-
-    public static void show(int balance, int withdrawal) {
-        System.out.println("Balance: " + balance);
-        System.out.println("Withdrawal: " + withdrawal);
-        System.out.println("New balance: " + (balance - withdrawal));
-    }
-
-    public static void main(String[] args) {
-        show(5000);             // Calls show(int)
-        show(5000, 1000);       // Calls show(int, int)
     }
 }
 
