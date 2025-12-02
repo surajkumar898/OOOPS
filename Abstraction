@@ -1,2 +1,28 @@
 variable shadowing is the same variable  have the different values.
 Method shadowing is the parent and child class have the same method and having static method 
+The process of hiding the implementation but providing the important features 
+Abstraction is implement by the two ways 
+Abstract class and Interface 
+In Abstract class, can have both abstract and non abstract method, it support single inheritance, can have various types variabels are final, static and non static, provide some implementation details. 
+It can extend other classes and implement the interface.
+Abstract class is used to archieve single level inheritance.
+Abstract class is  allow static and non static method, so abstraction is reduced 
+Using Interface, we can archieve the 100% of abstraction and  multiple inheritance.
+
+Characteristic of Interface 
+Interface does not allow constructor, we can archeieve multiple inheritance 
+Interface does not allow object creation.
+Interface allow static method and body to make it function. but it cannot inherit the class 
+three types of interface 
+regular interface, functional interface, Marker interface.
+
+Regular Interface 
+The interface containing more than one abstract methods.
+
+Functional Interface 
+The interface containing only one abstract method is called as functional interface.
+
+Marker Interface 
+Interface containing zero abstract method
+Serizable(), clonable(),random access()
+
